@@ -27,25 +27,27 @@ function Login() {
         }
       );
 
-      const userData = session.data;
-      // if(userData) {
-      const currentUser = await axios.get(
-        "http://localhost:8080/api/v1/users/current-user",
-        {
-          headers: {
-            Authorization: `Bearer ${userData.data.accessToken}`,
-            accept: "application/json",
-          },
-        }
-      );
+        const userData = session.data;
+        if(session.status === 200) {
+        const currentUser = await axios.get(
+          "http://localhost:8080/api/v1/users/current-user",
+          {
+            headers: {
+              Authorization: `Bearer ${userData.data.accessToken}`,
+              accept: "application/json",
+            },
+          }
+        );
 
-      if (userData) {
-        console.log(userData.accessToken);
-        dispatch(authlogin(userData.data));
-        if (userData.statusCode === 401 || userData.statusCode === 404) {
-          return userData;
+        if (currentUser.status === 200) {
+          // console.log(currentUser);
+          dispatch(authlogin(userData.data));
+          if (userData.statusCode === 401 || userData.statusCode === 404) {
+            return userData;
+          }
         }
       }
+
       navigate("/Home");
     } catch (error) {
       console.log(error.message);

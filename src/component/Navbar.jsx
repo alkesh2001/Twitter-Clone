@@ -18,8 +18,8 @@ function Navbar(props) {
               <div className='fixed  top-0 left-0'>
                 {props.visible && <Aside/>}
               </div>
-              <div className={`profile  pt-4 ${props.visible? 'hidden' : 'show' } justify-end flex items-center w-16 rounded-full p-1 border-white`} onClick={props.aside}> 
-                {profileData && <img className='rounded-full w-8 h-8' style={{border:'3px solid white'}} src={profileData.data.account.avatar.url} alt="" /> }         
+              <div className={`profile  pt-4 ${props.visible? 'hidden' : 'show' } justify-end flex items-center w-16 rounded-full p-1`} onClick={props.aside}> 
+                {profileData && <img className='rounded-full w-8 h-8 border-2'  src={profileData.data.account.avatar.url} alt="" /> }         
               </div>
           </div>
           <div className='justify-center w-5/6 h-13 flex  ps-16 py-3' >

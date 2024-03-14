@@ -12,7 +12,7 @@ function Profile() {
 
   // const coverImageData = useSelector((state) => state.auth.coverImageData);
   // console.log(coverImageData);
-  // console.log(profileData)
+  console.log(userData)
   
   const [getData , setGetData] = useState([])
   
@@ -95,10 +95,10 @@ function Profile() {
           </div>
           <div className="-translate-y-8   border-b border-0 border-gray-900">
             <div className="flex justify-between px-5 w-full">
-              <div className="h-20 w-20 rounded-full border border-blue-500 flex justify-center items-center">
+              <div className="h-20 w-20 rounded-full flex justify-center items-center">
                 <img
                   src={profileData.data.account.avatar.url}
-                  className=" rounded-full"
+                  className=" rounded-full h-full w-full"
                   alt=""
                 />
               </div>

@@ -54,7 +54,7 @@ function Aside() {
               <div className=''>
                 <div className=''>
                   <Link to='/Profile'>
-                  {profileData &&  <img src={profileData.data.account.avatar.url} className='border-4 cursor-pointer border-white h-10 w-10 rounded-full ' alt=" "/> }
+                  {profileData &&  <img src={profileData.data.account.avatar.url} className='border-2 cursor-pointer  h-10 w-10 rounded-full ' alt=" "/> }
                    
                     <p className=' cursor-pointer pt-2 font-medium'>
                       { profileData && profileData.data.account.username}
