@@ -22,7 +22,7 @@ function SearchInput() {
         },
        });
        if(response.data){
-        console.log(response.data)
+        console.log(response)
         dispatch(GetUserAccount(response.data))
       }
     };  

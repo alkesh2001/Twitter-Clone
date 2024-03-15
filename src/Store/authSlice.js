@@ -45,8 +45,7 @@ const authSlice = createSlice({
             state.status = true ;
             state.getUserAccountData = action.payload;
         },
-        ResetUserAccount : (state , action) =>{
-            console.log('resent user account when inpu tis empty')
+        ResetUserAccount : (state ) =>{
             state.status = true ;
             state.getUserAccountData =  null;
         }

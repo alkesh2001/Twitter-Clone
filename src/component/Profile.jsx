@@ -9,10 +9,6 @@ import { GetMyPostCard } from "./index";
 function Profile() {
   const profileData = useSelector((state) => state.auth.profileData);
   const userData = useSelector(state => state.auth.userData)
-
-  // const coverImageData = useSelector((state) => state.auth.coverImageData);
-  // console.log(coverImageData);
-  console.log(userData)
   
   const [getData , setGetData] = useState([])
   
@@ -27,7 +23,6 @@ function Profile() {
           }
          });
          if(response.data){
-          console.log(response.data.data)
           setGetData(response.data.data.posts)
          }
     } catch (error) {
@@ -151,8 +146,8 @@ function Profile() {
                 </div>
               </div>
             </div>
-            <div className="text-lg font-medium mx-4 w-12 text-center border-b-2 border-blue-500 ">
-              post
+            <div className="text-lg font-medium mx-4 w-12 text-center  border-b-2 border-blue-500 ">
+              posts
             </div>
           </div>
           

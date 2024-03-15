@@ -14,12 +14,12 @@ function CommentCard({comment ,deleteComment}) {
     }
 
   return (
-    <div className='bg-black my-3'>
+    <div className='bg-black my-2'>
         <div className='flex gap-6'>
-            <div className=''>
-                <img src={comment.author.account.avatar.url} className='  w-16 rounded-full' alt="" />
+            <div className='h-16 w-16 flex justify-center items-center'>
+                <img src={comment.author.account.avatar.url} className='h-12 w-12 rounded-full' alt="" />
             </div>
-            <div className='flex  justify-between w-full'> 
+            <div className='flex items-center  justify-between w-full'> 
                 <div>
                     <div>
                         <div className='text-md font-medium'>{comment.author.account.username}</div>

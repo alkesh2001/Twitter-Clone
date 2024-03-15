@@ -11,7 +11,7 @@ export default function Protected({children , authentication = true }) {
 //    console.log(authStatus)
    useEffect(()=>{
         if(authentication && authStatus !== authentication){
-            navigate('./Login')
+            navigate('/Login')
         }else if(!authentication && authStatus !== authentication){
            navigate('/Home')
         }

@@ -6,10 +6,8 @@ import axios from 'axios'
 
 function Home() {
   
-  const profileData = useSelector(state=> state.auth.profileData)
   const userData = useSelector(state => state.auth.userData)
   //  const accessToken = userData ? userData.accessToken : null;
- 
   // console.log(userData.accessToken)
   const accessToken = userData ? userData.accessToken : null;
 

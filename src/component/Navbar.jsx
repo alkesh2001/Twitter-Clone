@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Logo , Aside,  SearchInput} from './index'
 import { useSelector } from 'react-redux'
 import { useLocation } from 'react-router-dom'
@@ -6,8 +6,6 @@ import { useLocation } from 'react-router-dom'
 function Navbar(props) {
 
     const profileData = useSelector(state=> state.auth.profileData)
-   const userData = useSelector(state => state.auth.userData)
-  //  console.log(profileData)
      
     const location = useLocation();
 

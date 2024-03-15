@@ -65,7 +65,13 @@ function CreatePost() {
       <div className="bg-black h-screen text-white">
         <div className=" py-5 px-5 absolute ">
           <div className="flex justify-between">
-            <div className="text-2xl font-medium ">X</div>
+            <div className="text-2xl font-medium ">
+              <Link to={'/Home'}>
+                <button>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+              </Link>
+            </div>
             <div className="">
               <button
                 // type="submit"

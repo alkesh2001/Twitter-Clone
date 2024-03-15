@@ -5,17 +5,12 @@ import axios from "axios";
 import { useState } from "react";
 
 function UserProfile() {
-  // const dispatch = useDispatch();
   const getUserData = useSelector((state) => state.auth.getUserAccountData);
-  const userData = useSelector((state) => state.auth.userData)
-  // const accessToken = userData ? userData.accessToken : null;
-  // console.log(userData.accessToken)
-  // const PostId = getUserData.data._id
-  const PostId = getUserData.data._id
-  // console.log(userData.user)
-   
+  const userData = useSelector((state) => state.auth.userData);
+
+  const PostId = getUserData.data._id;
   
-  const [isFollowing , setisFollowing ] = useState(null)
+  const [isFollowing , setisFollowing ] = useState(null);
 
   useEffect(() => {
     if (getUserData.data) {
@@ -23,12 +18,13 @@ function UserProfile() {
     }
   }, [getUserData.data]);
 
+  // follow api not work 
 
   const FollowBtn = async (PostId) =>{
     try {
       // const endpoint =  isFollowing ? `http://localhost:8080/api/v1/social-media/unfollow/${PostId}` : `http://localhost:8080/api/v1/social-media/follow/${PostId}`;
-      console.log(userData)
         const response = await axios.post( `http://localhost:8080/api/v1/social-media/follow/${PostId}`,
+        {},
           {  
               headers: {
                 Accept: 'application/json, text/plain, */*',
@@ -46,13 +42,7 @@ function UserProfile() {
     } catch (error) {
       console.error('api not work properly ' , error)
     }
-}
-    // useEffect(()=>{  
-        
-    // },[getUserData,PostId]) 
-
-// console.log(isFollowing)
-// console.log(getUserData.data)
+};
 
   return (
     <div className="h-screen">
