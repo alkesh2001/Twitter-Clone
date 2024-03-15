@@ -19,7 +19,7 @@ function StartPage() {
 
         <div>
           <div className="flex mt-5 justify-center py-3">
-            <div className="rounded-full flex gap-3 md:text-lg   font-medium py-2 px-4 md:px-11 text-black bg-white">
+            <div className="rounded-full flex gap-3 md:text-lg   font-medium py-2 px-3 md:px-11 text-black bg-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -53,7 +53,7 @@ function StartPage() {
             </div>
           </div>
           <div className="flex justify-center py-2">
-            <div className="flex items-center rounded-full gap-3 md:text-lg   font-medium py-2 px-5 md:px-11 text-black bg-white">
+            <div className="flex items-center rounded-full gap-3 md:text-lg   font-medium py-2 px-4 md:px-11 text-black bg-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"

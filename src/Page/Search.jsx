@@ -11,7 +11,7 @@ function Search() {
             <Navbar/>
          </div>
       </div>
-      <div className='px-2'>
+      <div className=''>
         <div className=''>
             <Account/>
         </div>

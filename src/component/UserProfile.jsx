@@ -52,7 +52,7 @@ function UserProfile() {
     // },[getUserData,PostId]) 
 
 // console.log(isFollowing)
-console.log(getUserData.data)
+// console.log(getUserData.data)
 
   return (
     <div className="h-screen">
@@ -112,10 +112,10 @@ console.log(getUserData.data)
               </div>
               <div className="-translate-y-8 border-b border-0 border-gray-400">
                 <div className="flex justify-between px-5 w-full">
-                  <div className="h-20 w-20 rounded-full border border-blue-500 flex justify-center items-center">
+                  <div className="h-20 w-20   flex justify-center items-center">
                     <img
                       src={getUserData.data.account.avatar.url}
-                      className=" rounded-full"
+                      className=" rounded-full h-full w-full object-cover"
                       alt=""
                     />
                   </div>

@@ -8,36 +8,7 @@ import React, { useState } from "react";
     const PostId = post._id
 
     const [like , setLike] = useState(false) 
-    // const [updateData , setUpdateData] = useState('')
-  
-    // const userData = useSelector(state => state.auth.userData)
-    // const accessToken = userData ? userData.accessToken : null;
-    console.log(post)
     
-
-    // const handleLike = async (PostId) => {
-        
-    //   try {
-        
-    //     const response = await axios.post(`http://localhost:8080/api/v1/social-media/like/post/${PostId}`,
-    //     {},
-    //     {
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //         Accept: "application/json",
-    //         Authorization: `Bearer ${accessToken}`,
-    //       },
-    //     });
-    //     if(response.data){
-    //       setLike(perLike => !perLike)
-          
-    //     }
-
-    //   } catch (error) {
-    //      console.error('error in this when likes not working', error)
-    //   }
-
-    // }
 
     const handledelete = async () =>{
 
@@ -61,8 +32,8 @@ import React, { useState } from "react";
       <div className="bg-black pb-4 border-b border-gray-900 text-white px-4 py-3">
         <div className="">
           <div className="flex gap-5">
-            <div className=" w-16 h-16 rounded-full">
-              <img src={post.author.account.avatar.url} className="rounded-full" alt="" />
+            <div className="w-20 h-20">
+              <img src={post.author.account.avatar.url} className="w-14 h-14 rounded-full" alt="" />
             </div>
             <div className="  w-full">
               <div className="flex justify-between">
