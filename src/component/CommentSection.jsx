@@ -9,11 +9,10 @@ function CommentSection({post}) {
   
   const userData = useSelector(state=> state.auth.userData)
   const PostId = post._id
-  // console.log(post)
 
   const {register , handleSubmit} = useForm();
   const [com , setCom] = useState(null)
-  const [commentData, setCommentData] = useState({ text: '' }); // State to hold comment text
+  const [commentData, setCommentData] = useState({ text: '' }); 
 
   const handleInputChange = (e) => {
     setCommentData({ ...commentData, [e.target.name]: e.target.value });
@@ -29,6 +28,9 @@ function CommentSection({post}) {
           Authorization : `Bearer ${userData.accessToken}`
       }
     })
+    if(response.status === 200){
+      //  console.log('comment add')
+    }
   };
   
   
@@ -43,15 +45,14 @@ function CommentSection({post}) {
            });
            if(response.data){
             setCom(response.data.data.comments)
-            // console.log(response.data)
            }
 
         } catch (error) {
-          
+          console.error('fetching comment problem show in this' , error)
         }
       }
       Commentshow();
-    },[]);
+    },[com]);
 
     const deleteComment = async (id) =>{
          const response = await axios.delete(`http://localhost:8080/api/v1/social-media/comments/${id}`,{
@@ -64,8 +65,6 @@ function CommentSection({post}) {
           console.log('post delete')
          }
     };
-
-    // console.log(com)
   
   return (
     <div className='bg-black  w-full '>

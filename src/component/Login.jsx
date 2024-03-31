@@ -54,39 +54,6 @@ function Login() {
     }
   };
 
-  // const login = async (data) =>{
-  //    setError('')
-  //     try {
-  //         const session = await fetch('http://localhost:8080/api/v1/users/login',{
-  //             method :'POST',
-  //             headers : {
-  //                 "content-type" : 'application/json' ,
-  //                 "Accept": 'application/json'
-  //             },
-  //             body: JSON.stringify(data)
-  //         });
-  //         const userData = await session.json()
-  //         // if(userData) {
-  //              fetch('http://localhost:8080/api/v1/users/current-user',{
-  //                     method :'GET',
-  //                     headers : {
-  //                         "Authorization" : `Bearer ${userData.data.accessToken}` ,
-  //                         "accept" : 'application/json'
-  //                     },
-  //                     // body: JSON.stringify(data)
-  //                 })
-  //                 if(userData)
-  //                 console.log(userData.accessToken)
-  //                  dispatch(authlogin(userData.data))
-
-  //                  if(userData.statusCode === 401 || userData.statusCode === 404 ){
-  //                     return userData
-  //                  }
-  //                 navigate('/Home')
-  //     }
-  //         catch (error) {
-  //             console.log(error.message)
-  //         }
 
   return (
     <div className=" flex items-center justify-center h-screen bg-black">
@@ -112,16 +79,7 @@ function Login() {
 
         <form onSubmit={handleSubmit(login)} method="POST" className="mt-8">
           <div className="space-y-6  text-white">
-            {/* <Input 
-                            label= 'Full Name'
-                            placeholder='Enter your full name'
-                            {...register('username' , {
-                                required : true
-                            })}
-
-                        /> */}
             <Input
-              //   label='Email'
               type="email"
               placeholder="Enter your Email"
               {...register("email", {
@@ -147,7 +105,7 @@ function Login() {
                 type="submit"
               >
                 {" "}
-                Sign in
+                Login
               </button>
             </div>
           </div>

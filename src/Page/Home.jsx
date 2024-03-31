@@ -43,7 +43,7 @@ function Home() {
   }
   useEffect(()=>{
     getAllPost();
-  },[accessToken  ])
+  },[accessToken  , data])
 
   const DeletePost = async (id) =>{ 
     try {

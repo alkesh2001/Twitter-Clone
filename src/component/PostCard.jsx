@@ -90,7 +90,7 @@ import CommentSection from "./CommentSection";
           <div className="flex gap-5">
             <div className=" w-14 h-14 ">
               <div className="w-14 h-14 ">
-                <img src={post.author.account.avatar.url} className="rounded-full w-full h-full object-cover" alt="" />
+                <img src={post.author.account.avatar.url} className="rounded-full w-12 h-12 object-cover" alt="" />
               </div>
             </div>
             <div className="  w-full">

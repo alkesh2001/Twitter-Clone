@@ -38,7 +38,6 @@ function Singup() {
           navigate('/Home');
         } catch (error) {
           console.error('Error occurred while submitting data:', error);
-          // Handle error state or show an error message to the user
         }
       };
 
@@ -53,10 +52,10 @@ function Singup() {
                 <p className="text-white mt-2 text-center text-base ">
                     Already have an account?&nbsp;
                     <Link
-                        to="/"
+                        to="/Login"
                         className="font-medium text-primary transition-all duration-200 hover:underline"
                     >
-                        Sign In
+                        LogIn
                     </Link>
                 </p>
                 {/* {error && <p className="text-red-600 mt-8 text-center">{error}</p>} */}
@@ -64,7 +63,6 @@ function Singup() {
                 <form onSubmit={handleSubmit(submit)} method='POST' className='mt-6'>
                     <div className='space-y-5 text-white'>
                         <Input 
-                            // label= 'Full Name'
                             placeholder='Enter your full name'
                             {...register('username' , {
                                 required : true
@@ -72,7 +70,6 @@ function Singup() {
 
                         />
                         <Input
-                            //   label='Email'
                               type="email"
                               placeholder='Enter your Email'
                               {...register('email' ,{
@@ -84,7 +81,6 @@ function Singup() {
                               })}
                          />
                         <Input
-                            //   label='Password'
                               type='password'
                               placeholder='Enter your password'
                               {...register('password',{
